@@ -34,4 +34,4 @@ echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" 
 sudo apt-get install -y mongodb-org
 
 mongod &
-pip install -r config/requirements.txt
+sudo pip install -r config/requirements.txt
