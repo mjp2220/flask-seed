@@ -9,7 +9,7 @@ sudo apt-get -yqqf upgrade
 command -v git > /dev/null
 if [ $? -ne 0 ]; then
   echo "Installing Git"
-  apt-get -yqq install git
+  sudo apt-get -yqq install git
 fi
 
 # Install Build Essentials
@@ -20,7 +20,7 @@ sudo apt-get -y install build-essential python-dev
 command -v pip > /dev/null
 if [ $? -ne 0 ]; then
   echo "Installing Pip"
-  apt-get -yqq install python-pip
+  sudo apt-get -yqq install python-pip
 fi
 
 # Install Ruby
