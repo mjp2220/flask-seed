@@ -18,9 +18,7 @@ from flask.ext.assets import Environment, Bundle
 
 db = MongoEngine()
 app = None
-adi = dict()
 assets = None
-gcal_client = None
 
 
 def create_app(**config_overrides):
@@ -32,9 +30,7 @@ def create_app(**config_overrides):
 
     # we want to modify the global app, not a local copy
     global app
-    global adi
     global assets
-    global gcal_client
     app = Flask(__name__)
 
     # Load config then apply overrides

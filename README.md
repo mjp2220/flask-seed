@@ -12,26 +12,34 @@ Flask-Seed is an opinionated boilerplate for your next Flask app.  It uses the b
 
 ## First-Time Setup
 
-Flask-Seed runs natively on Linux and OSX in a virtual environment, using [Virtualenv][virtualenv]. To get it up an running, follow these steps:
+Flask-Seed runs natively on Linux and OSX in a virtual environment, using Vagrant and VirtualBox. To get it up an running, follow these steps:
 
-1.  Generate secrets files, using [good secret keys][secret-keys]:
+1.  Build your VirtualBox:
+
+    ```bash
+    vagrant up
+    vagrant ssh
+    cd /vagrant
+    ```
+
+2.  Generate secrets files, using [good secret keys][secret-keys]:
     
     ```bash
     cp config/example.secrets.py config/secrets.py
     vim config/secrets.py
     ```
 
-2.  Change all the `CHANGEME`s.  You should be able to run this command without seeing any output:
+3.  Change all the `CHANGEME`s.  You should be able to run this command without seeing any output:
 
     ```bash
     grep -rn CHANGEME .
     ```
     
-3.  Install [MongoDB][mongodb] ([Ubuntu Linux][mongodb-linux], [OSX][mongodb-osx]).
+4.  Install [MongoDB][mongodb] ([Ubuntu Linux][mongodb-linux], [OSX][mongodb-osx]).
 
     > On OSX, you may have to run `mkdir /data /data/db` before you can run `mongod` without errors.
 
-4.  Install [VirtualEnv][virtualenv]:
+5.  Install [VirtualEnv][virtualenv]:
     ```bash
     sudo pip install virtualenv
     ```

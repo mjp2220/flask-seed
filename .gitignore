@@ -1,3 +1,8 @@
+#*
+*~
+venv
+.vagrant
+
 # Folders
 /app/static/css/gen
 /lib
